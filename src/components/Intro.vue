@@ -20,7 +20,7 @@
 
         <v-layout justify-center>
             <v-btn @click="surrender" color="green" dark>I'm shitting already. Leave.</v-btn>
-            <v-btn color="red" dark>I'm ready to get whacked.</v-btn>
+            <v-btn @click="suicide" color="red" dark>I'm ready to get whacked.</v-btn>
         </v-layout>
     </v-container>
 </template>
@@ -29,8 +29,11 @@
 export default {
     methods: {
         surrender() {
-            console.log("here");
             this.$router.push({name: 'surrender'});
+        },
+
+        suicide() {
+            this.$router.push({name: 'pick-category'});
         }
     }
 };
